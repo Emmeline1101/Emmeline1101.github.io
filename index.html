@@ -951,6 +951,48 @@ and MyBatis for dynamic SQL queries in XML, boosting test coverage by 40% with J
 
                 </ul>
               </div>
+<<<<<<< HEAD
+<<<<<<< HEAD
+            </div> -->
+            <div class="card">
+              <div class="card-content">
+                <p>
+                  <span class="card-title"><a href="https://ics.uci.edu/" target="_blank" class="teal-text hoverline">University of California, Irvine</a></span>
+                </p>
+                <p class="brown-text">CA, USA</p>
+                <br>
+                <p>
+                  <b>College: </b> UCI Donald Bren School of Information & Computer Sciences
+                  <b>Degree: </b>Master of Computer Software Engineering
+                  <br>
+                  <b>CGPA: </b>3.95/4.0
+                </p>
+                
+                <p><b>Relevant Courseworks:</b></p>
+                <ul>
+                  <li>Web Programming</li>
+                  <li>User Experience and Interaction</li>
+                  <li>Reverse Engineering and Modeling</li>
+                  <li>Network Programming</li>
+                </ul>
+                
+                <div class="courses-more" style="display: none;">
+                  <ul>
+                    <li>Software Security and Dependability</li>
+                    <li>Concurrent Programming</li>
+                    <li>Software Testing and Debugging <br> (JUnit, TDD, BDD, CI/CD, Code Review, Static Analysis, Debugging, Mocking, GUI testing)</li>
+                    <li>Distributed Software Architecture <br> (event-bus, Android, RMI, REST)</li>
+                    <li>Programming Styles <br> (concurrent and parallel programming, object-oriented styles)</li>
+                  </ul>
+                </div>
+                
+                <button class="btn waves-effect waves-light courses-btn" type="button">View More</button>
+            
+              </div>
+=======
+>>>>>>> parent of 9de1a23 (add button)
+=======
+>>>>>>> parent of 9de1a23 (add button)
             </div>
 
             
@@ -972,7 +1014,7 @@ and MyBatis for dynamic SQL queries in XML, boosting test coverage by 40% with J
                   <b>CGPA: </b>3.6/4.0
                 </p>
 
-                <ul>
+                <!-- <ul>
                   <p>
                     <b>Relevant Courseworks:</b>
                   <ul>
@@ -984,7 +1026,27 @@ and MyBatis for dynamic SQL queries in XML, boosting test coverage by 40% with J
                   </ul>
                   </p>
 
+                </ul> -->
+                <p><b>Relevant Courseworks:</b></p>
+                <ul>
+                  <li>Data Structures & Algorithms</li>
+                  <li>Computer Organ & Programming (Java)</li>
+                  <li>Principle of Networking</li>
+                  <li>Obj Oriented Analysis & Design</li>
                 </ul>
+                
+                <div class="courses-more" style="display: none;">
+                  <ul>
+                    <li>Discrete Structures</li>
+                    <li>Python Programming</li>
+                    <li>Matrix & Linear Algebra</li>
+                    <li>Probability & Math Statistics</li>
+                    <li>Calculus I & II</li>
+                    <li>Management Information Systems</li>
+                  </ul>
+                </div>
+                
+                <button class="btn waves-effect waves-light courses-btn" type="button">View More</button>
               </div>
             </div>
           </div>
@@ -1048,6 +1110,27 @@ and MyBatis for dynamic SQL queries in XML, boosting test coverage by 40% with J
         closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor
       })
     })
+  </script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // 获取所有的 "View More" 按钮
+      const coursesBtns = document.querySelectorAll('.courses-btn');
+
+      coursesBtns.forEach((btn) => {
+        // 给每个按钮添加点击事件监听器
+        btn.addEventListener('click', () => {
+          const coursesList = btn.previousElementSibling; // 获取按钮前一个兄弟元素,即课程列表
+          
+          if (coursesList.style.display === 'none') {
+            coursesList.style.display = 'block';
+            btn.textContent = 'View Less';
+          } else {
+            coursesList.style.display = 'none';
+            btn.textContent = 'View More';
+          }
+        });
+      });
+    });
   </script>
 </body>
 
